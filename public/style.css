@@ -1,0 +1,96 @@
+  html, body {
+    text-align: center;
+    font-family: 'Avenir Next', 'Helvetica', 'Arial', sans-serif;
+  }
+
+  #bgDiv{
+	margin-left:90%;
+	text-align:left;
+	}
+  
+  
+  html,body,li,form,ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  form {
+    margin:10px;
+  }
+  #user_form{
+	margin-right:80%;
+	}
+  #username{
+	width:100px;
+	}
+	
+  #message_form{
+	margin:0 auto;
+	}
+  #message{
+	width:300px;
+	}
+	
+  li {
+    list-style: none;
+    width: 100vw;
+  }
+
+  /*li:nth-child(odd) { 
+    background: #eee; 
+  }*/
+
+.a {
+    list-style: none;
+    font-size:25px;
+    font-family:arial;
+    width: 90%;
+    height:200px;
+    text-align: left;
+	vertical-align: middle;
+    background: #FFA500;
+    border-radius: 20px;
+    margin: 10px auto 10px auto; 
+	position:relative;
+	word-wrap: break-word;
+	display:table;
+
+  }	
+  .words {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:left;
+    width:80%;
+    padding:5px;
+     
+  }
+ 
+  
+  .avitar {
+		height: 100%;
+		width: 100%;
+	}	
+  
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 420px) {
+ .avitar {
+	height: 80px;
+	width: 40px;
+	}	
+	
+  .a {
+
+    height:100px;
+    line-height:100px;
+  }	
+  .b {
+    list-style: none;
+    float:none;
+    margin: 0 auto;
+    height:100px;
+    line-height:100px;
+  }	
+}
+

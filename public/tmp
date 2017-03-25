@@ -1,0 +1,38 @@
+				document.getElementById("username").value = whois;
+
+
+
+
+	client.on('deluser', function(user){
+		client.emit("update", user + " has left the server.");
+		delete people[client.id];
+		client.emit("update-people", people);
+	});
+	
+	
+		client.on('deluser', function(user){
+		client.emit("update", user + " has left the server.");
+		delete people[client.id];
+		client.emit("update-people", people);
+	});
+	
+	
+	
+	         $("#mylink").submit(function(){
+			document.cookie("username=");
+			var user = people[client.id];
+            socket.emit('deluser', user);
+            return false;
+         });
+         
+         
+         
+         }
+			else if(who === "Ciara"){
+				$('#thread').append('<div class="a"><div style="float: left;" ><img src="scout.png" class="avitar"></div><div class="words">' + data + '</div></div>');
+			}
+            else{
+            $('#thread').append('<div class="a" style="margin:auto 0;"><div style="float: left;" ><img src="scout.png" class="avitar"></div><div class="words">' + data + '</div></div>');
+			}
+			
+         

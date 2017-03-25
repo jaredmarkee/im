@@ -1,0 +1,75 @@
+<html>  
+    <head>
+      <title> Real Time Chat </title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+      <link rel="stylesheet" href="style.css" />
+       <script>
+		function getCookie(name) {
+				function escape(s) { return s.replace(/([.*+?\^${}()|\[\]\/\\])/g, '\\$1'); };
+				var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
+				return match ? match[1] : null;
+			}
+
+		var whois = getCookie("username");
+		
+		function signOut(){
+            document.cookie = "username=";
+            document.getElementById("login").style.display = "none";
+            document.getElementById("user_form").style.display = "block";
+         }
+         
+ 
+		function isLogged(){
+			if(whois !== ""){
+				document.getElementById("user_form").style.display = "none";
+				document.getElementById("login").innerHTML = "Logged in as " + whois + " " +' <button id="mylink" onclick="signOut()" type="submit">Sign Out</button>';			
+ 
+			}
+			else{
+				document.getElementById("user_form").style.display = "block";
+			}
+		}
+		
+		function Login(){
+			
+				document.getElementById("login").innerHTML = "Logged in as " + whois;
+			}
+			
+		
+		</script>
+    </head>
+    <body>
+        <h1> Chat! </h1>
+		<div id="login" style="	margin-right:80%;"></div>
+		<div id="bgDiv">
+		<form action="">
+			<input type="radio" name="gender" value="male"> Male<br>
+			<input type="radio" name="gender" value="female"> Female<br>
+			<input type="radio" name="gender" value="other"> Other
+		</form>
+		</div>
+        <form id="user_form" name="user_form">
+            <input id="username" type="text" placeholder="Enter User" />
+            <input type="submit" value="Sign In"  />
+        </form>
+        <form id="message_form">
+            <input id="message" type="text" placeholder="message" />
+            <input type="submit" value="Send" />
+        </form>
+        
+
+        <ul id="thread"></ul>
+
+		
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+
+        <script src="client.js"></script>
+		<script>
+		
+		</script>
+
+    </body>
+ </html>  
+
